@@ -1,0 +1,12 @@
+extends lib/layout
+
+block content
+    .container
+        div(ng-controller="worldCtrl")
+            ul
+                li(ng-repeat="country in countries") {{country.name}} has {{country.population}}
+            hr
+            p world population:{{population()}}
+            button.btn.btn-default(ng-click="addBtn()") add
+
+

@@ -1,0 +1,23 @@
+{
+  "name": "grunt",
+  "version": "0.0.1",
+  "authors": [
+    "jing.min <jing.min@163.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "jquery": "2.1.4",
+    "bootstrap": "v4.0.0-alpha.2",
+    "angular": "angularjs#^1.5.0",
+    "bootstrapvalidator": "bootstrapValidator#^0.5.3"
+  }
+}

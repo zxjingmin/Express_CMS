@@ -1,0 +1,8 @@
+extends ../lib/layout
+
+block content
+    ul
+        each item in articles
+            li
+                a(href='/articles/show/#{item._id}') #{item.text}
+                span #{item.date}

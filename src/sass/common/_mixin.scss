@@ -1,0 +1,60 @@
+@charset "UTF-8";
+@mixin left{
+	float: left;
+}
+
+@mixin right{
+	float: right;
+}
+
+@mixin fillAll(){
+	width: 100%;
+	height: 100%;
+};
+
+%clear{
+	&:after{
+		content: ".";
+		height: 0;
+		overflow: hidden;
+		display: block;
+		clear: both;
+	}
+}
+
+%title_h2{
+	line-height:$titleLineHeight;
+	font-size:$titleH2font;
+	padding:0 6px 0 16px;
+	margin: 0;
+	color:#999;
+}
+
+%a_more{
+	float:right;
+	color:#BBB;
+	font-weight: normal;
+	font-size:90%;
+	background: url(../images/ico_more.png) no-repeat right center;
+	padding-right:10px;
+	color:#ff6600;
+}
+
+
+@mixin MQ($canvas){
+	@if $canvas == S {
+		@media only screen and (max-width:$M - 1){
+			@content;
+		}
+	}
+	@else if $canvas == M {
+		@media only screen and (min-width:$M) and (max-width:$L - 1){
+			@content;
+		}
+	}
+	@else if $canvas == L {
+		@media only screen and (min-width:$L){
+			@content;
+		}
+	}
+}

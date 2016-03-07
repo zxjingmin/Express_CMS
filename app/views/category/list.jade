@@ -1,0 +1,35 @@
+extends ../lib/layout
+block append css
+  link(rel='stylesheet', href='/public/bootstrapvalidator/dist/css/bootstrapValidator.css')
+block append js
+  script(src='/public/bootstrapvalidator/dist/js/language/zh_CN.js')
+  script(src='/public/bootstrapvalidator/dist/js/bootstrapValidator.js')
+block content
+  .container
+    .row
+      button#addCategory.btn.btn-danger.del(type="button",data-toggle="modal", data-target="#addCategoryDlg") 增加类别
+    .row(ng-controller="categoryList")
+      table#categoriesList.table.table-hover.table-bordered
+        thead
+          tr
+            th 类型名
+            th 删除
+        tbody()
+            tr(class="item-id-{{category._id}}",ng-repeat="category in categories")
+              td {{category.name}}
+              td
+                button.btn.btn-danger.delCategory(type="button", data-id="{{category._id}}",ng-click="reomveCategoryBtn($event)") 删除
+      #addCategoryDlg.modal.fade
+        .modal-dialog
+          .modal-content
+            form#addCategoryForm(ng-submit="submitCategoryForm()")
+              .modal-header 增加类型
+              .modal-body
+                .form-group
+                  label(form="categoryName") 类型名
+                  input#categoryName.form-control(type="text",ng-model="formData.category.name")
+              .modal-footer
+                button.btn.btn-default(type="button", data-dismiss="modal") 关闭
+                button.btn.btn-success(type="submit") 提交
+
+

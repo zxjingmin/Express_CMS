@@ -1,0 +1,30 @@
+- BOOTSTROP_VALIDATOR=true
+extends ../lib/layout
+block append css
+  link(rel='stylesheet', href='/public/bootstrapvalidator/dist/css/bootstrapValidator.css')
+block append js
+  script(src='/public/bootstrapvalidator/dist/js/language/zh_CN.js')
+  script(src='/public/bootstrapvalidator/dist/js/bootstrapValidator.js')
+  script(src='/js/app.min.js')
+block content
+  .container
+      form#reigsterForm.form-horizontal(action="/user/register",method="post")
+        .form-group.row
+          label.col-sm-4.form-control-label(for="name") 用户名
+          .col-sm-6
+            input#name.form-control(type="text",placeholder="username",name="user[name]")
+        .form-group.row
+          label.col-sm-4.form-control-label(for="password") 密码
+          .col-sm-6
+            input#password.form-control(type="password",placeholder="password",name="user[password]")
+        .form-group.row
+          label.col-sm-4.form-control-label(for="repassword") 重复密码
+          .col-sm-6
+            input#repassword.form-control(placeholder="repassword",type="password",name="repassword")
+        .form-group.row
+          label.col-sm-4.form-control-label(for="email") 电子邮件
+          .col-sm-6
+            input#email.form-control(type="email",placeholder="email",name="user[email]")
+        .form-group.row
+          .col-sm-3
+            input.btn.btn-primary.form-control(type="submit" value="注册")

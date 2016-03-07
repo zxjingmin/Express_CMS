@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/**
+ * $mainWidth 主体宽度
+ * @type 数值
+ */
+$mainWidth:860px;
+/**
+ * $linkColor 链接颜色
+ * @type color
+ */
+$linkColor:#666;
+
+/**
+ * $linkColor 链接悬挂颜色
+ * @type color
+ */
+$linkHoverColor:#669;
+
+$titleH2font:15px;
+
+$titleLineHeight:22px;
+
+//当body字体为16px,约288px
+//$XS:18em;
+
+//当body字体为16px,约480px
+$S:30em;
+
+//当body字体为16px,约688px
+$M:50em;
+
+//当body字体为16px,约912px
+$L:65em;
+
+//当body字体为16px,约912px
+//$XL:80em;
+$imagePath:"../images";
+
+

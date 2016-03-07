@@ -1,0 +1,14 @@
+*.sublime-project
+*.sublime-workspace
+_notes
+*.zip
+*.rar
+~*.*
+node_modules
+*.cache
+dist
+*.log
+library
+bower_components
+.sass-cache
+dest

@@ -1,0 +1,12 @@
+@charset "UTF-8";
+@import "compass";
+
+body{
+    padding-top:5rem;
+}
+.form-control-label{
+    text-align:right;
+    &:after{
+        content: "：";
+    }
+}
